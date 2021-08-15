@@ -68,11 +68,8 @@ function dateBuilder(d) {
   let year = d.getFullYear();
 
   return `${day} ${date} ${month} ${year}`;
+  
 }
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    getResults("Kanpur");
-    const searchbox = document.querySelector(".search-box");
-    searchbox.addEventListener("keypress", setQuery);
-  }
-}
+  getResults("Kanpur");
+  const searchbox = document.querySelector(".search-box");
+  searchbox.addEventListener("keypress", setQuery);
